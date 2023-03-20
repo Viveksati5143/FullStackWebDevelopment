@@ -5,24 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML TABLE BACKGROUND</title>
+    <link rel="stylesheet" href="/CSS/External.css">
+    <style>
+        .bodyy{
+            text-decoration: dotted;
+        }
+    </style>
 </head>
-<body>
-    <table border="8" bordercolor="green">
+<body class="bodyy">
+    <table border="8" bordercolor="green" class="tablee">
         <tr>
             <th>Column 1</th>
             <th>Column 2</th>
             <th>Column 3</th>
         </tr>
-        <tr>
+        <tr class="tdc">
             <td rowspan="2">Row 1 cell 1</td>
             <td>Row 1 cell 2</td>
             <td>Row 1 cell 3</td>
         </tr>
-        <tr>
+        <tr class="tdc">
             <td>Row 2 cell 2</td>
             <td>Row 2 cell 3</td>
         </tr>
-        <tr>
+        <tr class="tdc">
             <td colspan="3" align="center">Row 3 Cell 1</td>
         </tr>
     </table>    
