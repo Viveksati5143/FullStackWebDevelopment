@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form</title>
+</head>
+<script>
+    function validate()
+    {
+        let x=document.forms["fname"]["entry1"].value
+        if(x==""){
+            alert("Invalid")
+            x.focus()
+            return false
+        }
+        let y=document.forms["forms"]["entry3"].value
+        if(y.length!=10){
+            alert("Invalid phone number")
+            y.focus()
+            return false
+        }
+    }
+</script>
+<body>
+    <form action="" method="post" name="fname" onsubmit="return validate()">
+        Name: <input type="text" name="entry1">
+        <br>
+        Email: <input type="email" name="entry2">
+        <br>
+        Phone num: <input type="number" name="entry3">
+        <br>
+        <input type="submit" value="submit">
+    </form>    
+</body>
+</html>
