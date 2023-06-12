@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormValidationModified</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("uname");
+            var password = document.getElementById("upass");
+
+            if(username.value.trim() == "") 
+            {
+                alert("Blank username");
+                username.style.border = "solid 3px red";
+                document.getElementById("lbluser")
+                .style.visibility="visible";
+                return false;
+            } 
+            else if(password.value.trim() == "")
+            {
+                alert("Blank Password");
+                return false;
+            }
+            else if(password.value.trim().length<5)
+            {
+                alert("Password too short");
+                return false;
+            }
+            else{
+                return true;                
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()" action="message.html">
+        <input type="text" id="uname" placeholder="Username">
+        <label id="lbluser" style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+        <input type="password" id="upass" placeholder="Password">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>    
+</body>
+</html>
